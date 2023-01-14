@@ -1,0 +1,49 @@
+.team {
+    background-color: var(--color-background);
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item {
+        width: 270px;
+        background-color: var(--color-primary-title);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__block {
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+        color: var(--color-title);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.188;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.188;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        color: var(--color-title);
+        font-size: 36px;
+        line-height: 1.166;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+}
+
