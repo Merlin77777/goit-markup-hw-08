@@ -23,6 +23,11 @@
       <a class="logo logo--header-color" href="./index.html">
         <span class="logo--text-color">Web</span>Studio
       </a>
+      <button type="button" class="menu-toggle js-open-menu" data-menu-button aria-expanded="false">
+        <svg class="menu-toggle__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
+          <use class="menu-button__open" href="./images/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
       <nav>
         <ul class="header-nav list">
           <li class="header-nav__item">
@@ -52,6 +57,47 @@
             </svg>
             +38 096 111 11 11
           </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
+          <use class="menu-button__cross" href="./images/icons.svg#icon-close_menu"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu list">
+        <li class="mobile-menu__item">
+          <a href="./index.html" class="mobile-menu__link mobile-menu__link--current">Студія</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#" class="mobile-menu__link">Контакти</a>
+        </li>
+      </ul>
+      <ul class="contacts-menu list">
+        <li class="contacts-menu__item">
+          <a href="tel:+380961111111" class="contacts-menu__tel"> +38 096 111 11 11 </a>
+        </li>
+        <li class="contacts-menu__item">
+          <a href="mailto:info@devstudio.com" class="contacts-menu__mail"> info@devstudio.com </a>
+        </li>
+      </ul>
+      <ul class="social-menu list">
+        <li class="social-menu__item">
+          <a href="#" class="social-menu__link">Instagram</a>
+        </li>
+        <li class="social-menu__item">
+          <a href="#" class="social-menu__link">Twitter</a>
+        </li>
+        <li class="social-menu__item">
+          <a href="#" class="social-menu__link">Facebook</a>
+        </li>
+        <li class="social-menu__item">
+          <a href="#" class="social-menu__link">LinkedIn</a>
         </li>
       </ul>
     </div>
@@ -121,21 +167,27 @@
         <h2 class="works__title">Чим ми займаємося</h2>
         <ul class="works list">
           <li class="works__item">
-            <img src="./images/img_1.jpg" alt="людина набирає текст програми на клавіатурі" width="370" height="294" />
+            <!-- <img src="./images/img_1.jpg" alt="людина набирає текст програми на клавіатурі" width="370" height="294" /> -->
+            <img srcset="./images/img_1.jpg 1x, ./images/img_1@2x.jpg 2x" src="./images/img_1.jpg"
+              alt="людина набирає текст програми на клавіатурі" />
             <div class="works__bg-txt">
               <p class="works__txt">Десктопні додатки</p>
             </div>
           </li>
           <li class="works__item">
-            <img src="./images/img_2.jpg" alt="людина за ноутбуком розробляє дизайн додатку на телефон" width="370"
-              height="294" />
+            <!-- <img src="./images/img_2.jpg" alt="людина за ноутбуком розробляє дизайн додатку на телефон" width="370"
+              height="294" /> -->
+            <img srcset="./images/img_2.jpg 1x, ./images/img_2@2x.jpg 2x" src="./images/img_2.jpg"
+              alt="людина за ноутбуком розробляє дизайн додатку на телефон" />
             <div class="works__bg-txt">
               <p class="works__txt">Мобільні додатки</p>
             </div>
           </li>
           <li class="works__item">
-            <img src="./images/img_3.jpg" alt="людина на планшеті обирає колір на діаграмі кольорів" width="370"
-              height="294" />
+            <!-- <img src="./images/img_3.jpg" alt="людина на планшеті обирає колір на діаграмі кольорів" width="370"
+              height="294" /> -->
+            <img srcset="./images/img_3.jpg 1x, ./images/img_3@2x.jpg 2x" src="./images/img_3.jpg"
+              alt="людина на планшеті обирає колір на діаграмі кольорів" />
             <div class="works__bg-txt">
               <p class="works__txt">Дизайнерські рішення</p>
             </div>
@@ -149,7 +201,14 @@
         <h2 class="team__title">Наша команда</h2>
         <ul class="team__list list">
           <li class="team__item">
-            <img src="./images/photo_1.jpg" alt="фотограіфя Ігоря Дем'яненко" width="270" height="260" />
+            <!-- <img src="./images/photo_1.jpg" alt="фотограіфя Ігоря Дем'яненко" width="270" height="260" /> -->
+            <picture>
+              <source srcset="./images/photo_1.jpg 1x, ./images/photo_1@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/photo_1_tablet.jpg 1x, ./images/photo_1_tablet@2x.jpg 2x"
+                media="(min-width: 768px)" />
+              <img srcset="./images/photo_1_mobile.jpg 1x, ./images/photo_1_mobile@2x.jpg 2x"
+                src="./images/photo_1_mobile.jpg" alt="фотограіфя Ігоря Дем'яненко" class="team__photo" />
+            </picture>
             <div class="team__block">
               <h3 class="team__name">Ігор Дем'яненко</h3>
               <p class="team__text">Product Designer</p>
@@ -186,12 +245,19 @@
             </ul>
           </li>
           <li class="team__item">
-            <img src="./images/photo_2.jpg" alt="фотограіфя Ольги Рєпіної" width="270" height="260" />
+            <!-- <img src="./images/photo_2.jpg" alt="фотограіфя Ольги Рєпіної" width="270" height="260" /> -->
+            <picture>
+              <source srcset="./images/photo_2.jpg 1x, ./images/photo_2@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/photo_2_tablet.jpg 1x, ./images/photo_2_tablet@2x.jpg 2x"
+                media="(min-width: 768px)" />
+              <img srcset="./images/photo_2_mobile.jpg 1x, ./images/photo_2_mobile@2x.jpg 2x"
+                src="./images/photo_2_mobile.jpg" alt="фотограіфя Ольги Рєпіної" class="team__photo" />
+            </picture>
             <div class="team__block">
               <h3 class="team__name">Ольга Рєпіна</h3>
               <p class="team__text">Frontend Developer</p>
             </div>
-            <ul class="socialnet list">
+            <ul class="socialnet socialnet--pb list">
               <li class="socialnet__item">
                 <a class="socialnet__link socialnet__link--team" href="#">
                   <svg class="socialnet__icon" width="20" height="20">
@@ -223,12 +289,19 @@
             </ul>
           </li>
           <li class="team__item">
-            <img src="./images/photo_3.jpg" alt="фотограіфя Миколи Тарасова" width="270" height="260" />
+            <!-- <img src="./images/photo_3.jpg" alt="фотограіфя Миколи Тарасова" width="270" height="260" /> -->
+            <picture>
+              <source srcset="./images/photo_3.jpg 1x, ./images/photo_3@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/photo_3_tablet.jpg 1x, ./images/photo_3_tablet@2x.jpg 2x"
+                media="(min-width: 768px)" />
+              <img srcset="./images/photo_3_mobile.jpg 1x, ./images/photo_3_mobile@2x.jpg 2x"
+                src="./images/photo_3_mobile.jpg" alt="фотограіфя Миколи Тарасова" class="team__photo" />
+            </picture>
             <div class="team__block">
               <h3 class="team__name">Микола Тарасов</h3>
               <p class="team__text">Marketing</p>
             </div>
-            <ul class="socialnet list">
+            <ul class="socialnet socialnet--pb list">
               <li class="socialnet__item">
                 <a class="socialnet__link socialnet__link--team" href="#">
                   <svg class="socialnet__icon" width="20" height="20">
@@ -260,12 +333,19 @@
             </ul>
           </li>
           <li class="team__item">
-            <img src="./images/photo_4.jpg" alt="фотограіфя Михайла Єрмакова" width="270" height="260" />
+            <!-- <img src="./images/photo_4.jpg" alt="фотограіфя Михайла Єрмакова" width="270" height="260" /> -->
+            <picture>
+              <source srcset="./images/photo_4.jpg 1x, ./images/photo_4@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/photo_4_tablet.jpg 1x, ./images/photo_4_tablet@2x.jpg 2x"
+                media="(min-width: 768px)" />
+              <img srcset="./images/photo_4_mobile.jpg 1x, ./images/photo_4_mobile@2x.jpg 2x"
+                src="./images/photo_4_mobile.jpg" alt="фотограіфя Михайла Єрмакова" class="team__photo" />
+            </picture>
             <div class="team__block">
               <h3 class="team__name">Михайло Єрмаков</h3>
               <p class="team__text">UI Designer</p>
             </div>
-            <ul class="socialnet list">
+            <ul class="socialnet socialnet--pb list">
               <li class="socialnet__item">
                 <a class="socialnet__link socialnet__link--team" href="#">
                   <svg class="socialnet__icon" width="20" height="20">
@@ -460,6 +540,7 @@
     </div>
   </div>
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
