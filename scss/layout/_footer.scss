@@ -6,6 +6,13 @@
   &__container {
     display: flex;
     flex-direction: column;
+
+    @media screen and(min-width: 768px) {
+      margin-right: 95px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -46,13 +53,6 @@
   flex-direction: column;
   margin-top: 28px;
   font-style: normal;
-
-  @media screen and(min-width: 768px) {
-    margin-right: 95px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-right: 0;
-  }
 }
 
 .soc-cont {

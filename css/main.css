@@ -173,6 +173,8 @@ p {
   .header-contact__link {
     padding-top: 0;
     padding-bottom: 0;
+    font-size: 12px;
+    line-height: 1.17;
   }
 }
 .header-contact__link:hover, .header-contact__link:focus {
@@ -848,6 +850,16 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .footer__container {
+    margin-right: 95px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    margin-right: 0;
+  }
+}
 .footer__link {
   margin-bottom: 12px;
   color: rgba(255, 255, 255, 0.6);
@@ -899,16 +911,6 @@ p {
           flex-direction: column;
   margin-top: 28px;
   font-style: normal;
-}
-@media screen and (min-width: 768px) {
-  .addr {
-    margin-right: 95px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .addr {
-    margin-right: 0;
-  }
 }
 
 .soc-cont {
@@ -1086,15 +1088,15 @@ p {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   width: 100%;
-  max-width: 528px;
+  max-width: 450px;
   height: 100%;
-  max-height: 581px;
+  max-height: 610px;
   background-color: var(--color-primary-title);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1103,6 +1105,21 @@ p {
   transition: -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+    -webkit-transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+            transform: translate(-50%, -50%) scale(1) rotateZ(360deg);
+  }
 }
 
 .is-hidden {
@@ -1194,7 +1211,6 @@ p {
 }
 .subscribe__input-email {
   height: 50px;
-  width: 450px;
   padding: 15px;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.6);
@@ -1202,6 +1218,11 @@ p {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .subscribe__input-email {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe__input-email {
